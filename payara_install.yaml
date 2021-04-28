@@ -3,4 +3,4 @@
   hosts: all
   tasks:
     - name: "Install Payara"
-      win_shell: choco install payara
+      win_shell: choco install payara -y
