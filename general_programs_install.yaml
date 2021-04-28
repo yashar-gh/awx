@@ -1,15 +1,9 @@
----
- - name: Install General Programs
-   hosts: all
-   
-   task:
-     name: Install Google Chrome
-     win_chocolatey:
-        name: googlechrome
-        state: present
-     
-     name: Install Notepad++
-     win_chocolatey:
-        name: notepadplusplus
-        state: present
-        
+--- 
+- 
+  hosts: all
+  name: "Install General Programs"
+  task: 
+    name: "Install Notepad++"
+    win_chocolatey: 
+      name: notepadplusplus
+      state: present
