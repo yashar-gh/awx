@@ -9,5 +9,5 @@
     - name: "Uninstall NotePad++"
       win_chocolatey:
           name: notepadplusplus
-          state: present
+          state: absent
         
