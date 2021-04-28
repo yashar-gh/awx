@@ -1,11 +1,11 @@
 ---
-- name: "Uninstall Chrome"
+- name: "Install General Programs"
   hosts: all
   tasks:
     - name: "Install Google Chrome"
       win_chocolatey:
           name: googlechrome
-          State: absent
+          State: present
     - name: "Install NotePad++"
       win_chocolatey:
           name: notepadplusplus
