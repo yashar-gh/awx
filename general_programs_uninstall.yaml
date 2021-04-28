@@ -3,11 +3,7 @@
   hosts: all
   tasks:
     - name: "Uninstall Google Chrome"
-      win_chocolatey:
-          name: googlechrome
-          State: absent
+      win_shell: choco uninstall googlechrome -y
     - name: "Uninstall NotePad++"
-      win_chocolatey:
-          name: notepadplusplus
-          state: absent		
+      win_shell: choco uninstall notepadplusplus -y
         
