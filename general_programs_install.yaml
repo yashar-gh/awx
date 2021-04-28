@@ -7,3 +7,7 @@
     win_chocolatey: 
       name: notepadplusplus
       state: present
+    name: "Install Google Chrome"
+    win_chocolatey: 
+      name: googlechrome
+      state: present      
