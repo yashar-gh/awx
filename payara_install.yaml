@@ -2,7 +2,7 @@
 - name: "Install Payara"
   hosts: all
   tasks:
-    - name: "Install Java Runtime"
-      win_shell: choco install javaruntime -y
+    - name: "Install Java"
+      win_shell: choco install jdk8 -y
     - name: "Install Payara"
       win_shell: choco install payara -y
