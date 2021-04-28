@@ -1,0 +1,6 @@
+---
+- name: "Install Payara"
+  hosts: all
+  tasks:
+    - name: "Install Payara"
+      win_shell: choco install payara
