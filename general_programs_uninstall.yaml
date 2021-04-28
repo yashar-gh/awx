@@ -1,5 +1,5 @@
 ---
-- name: "Install General Programs"
+- name: "uninstall General Programs"
   hosts: all
   tasks:
     - name: "Install Google Chrome"
