@@ -4,9 +4,11 @@
   tasks:
     - name: "Install Java"
       win_shell: choco install jdk8 -y
-    - name: "Set Java Path"
-      win_shell: '[Environment]::SetEnvironmentVariable("Path",[Environment]::'GetEnvironmentVariable('Path',[EnvironmentVariableTarget]::Machine)' + "$($Env:JAVA_HOME)\bin",[EnvironmentVariableTarget]::Machine)'
+    #- name: "Set Java Path"
+      #win_shell: '[Environment]::SetEnvironmentVariable("Path",[Environment]::GetEnvironmentVariable('Path',[EnvironmentVariableTarget]::Machine) + "$($Env:JAVA_HOME)\bin",[EnvironmentVariableTarget]::Machine)'
     - name: "Install Payara-Chocolaty"
       win_shell: choco install payara -y
     - name: "Install Payara-CommandShell"
-      win_shell: C:\ProgramData\chocolatey\lib\payara\tools\payara41\bin\asadmin.bat create-service --name "<Sensible Service Name>" --displayName "<Sensible Display Name>" <Domain Name> -y
+      win_shell: asadmin.bat create-service --name "<Sensible Service Name>" --displayName "<Sensible Display Name>" <Domain Name> -y
+      args:
+         chdir: C:\ProgramData\chocolatey\lib\payara\tools\payara41\bin
