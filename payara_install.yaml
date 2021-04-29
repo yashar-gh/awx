@@ -12,5 +12,7 @@
       #win_shell:  C:\ProgramData\chocolatey\lib\payara\tools\payara41\bin\asadmin.bat create-service --name "Payara_domain1"
     # - name: "Start Payara Service"
    #    win_shell: C:\ProgramData\chocolatey\lib\payara\tools\payara41\glassfish\domains\domain1\bin\Payara_domain1Service.exe start
-     - name: "open Port 443"
-       win_shell: netsh advfirewall firewall add rule name="Port 443" dir=in action=allow protocol=TCP localport=443
+  #   - name: "open Port 443"
+   #    win_shell: netsh advfirewall firewall add rule name="Port 443" dir=in action=allow protocol=TCP localport=443
+     - name: "Disable Payara HTTPS"
+       win_shell:  C:\ProgramData\chocolatey\lib\payara\tools\payara41\bin\asadmin.bat set configs.config.server-config.network-config.network-listeners.network-listener.http-listener-1.enabled=false
