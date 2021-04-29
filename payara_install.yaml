@@ -4,5 +4,7 @@
   tasks:
     - name: "Install Java"
       win_shell: choco install jdk8 -y
+    - name: "Set Java Path"
+      win_shell: [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable('Path', [EnvironmentVariableTarget]::Machine) + "$($Env:JAVA_HOME)\bin", [EnvironmentVariableTarget]::Machine)
     - name: "Install Payara"
       win_shell: choco install payara -y
