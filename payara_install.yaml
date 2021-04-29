@@ -10,5 +10,7 @@
     #  win_shell: choco install payara -y
       #- name: "Install Payara-CommandShell"
       #win_shell:  C:\ProgramData\chocolatey\lib\payara\tools\payara41\bin\asadmin.bat create-service --name "Payara_domain1"
-     - name: "Start Payara Service"
-       win_shell: C:\ProgramData\chocolatey\lib\payara\tools\payara41\glassfish\domains\domain1\bin\Payara_domain1Service.exe start
+    # - name: "Start Payara Service"
+   #    win_shell: C:\ProgramData\chocolatey\lib\payara\tools\payara41\glassfish\domains\domain1\bin\Payara_domain1Service.exe start
+     - name: "open Port 443"
+       win_shell: netsh advfirewall firewall add rule name="Port 443" dir=in action=allow protocol=TCP localport=443
