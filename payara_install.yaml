@@ -9,6 +9,6 @@
   #  - name: "Install Payara-Chocolaty"
     #  win_shell: choco install payara -y
     - name: "Change Directory"
-      win_shell: cd C:\ProgramData\chocolatey\lib\payara\tools\payara41\
+      win_shell: cd C:\ProgramData\chocolatey\lib\payara\tools\payara41\bin
     - name: "Install Payara-CommandShell"
-      win_shell: bin\asadmin.bat create-service --name "Payara_domain1" --displayName "Payara_domain" domain1 -y
+      win_shell: .\asadmin.bat create-service --name "Payara_domain1" --displayName "Payara_domain" domain1 -y
