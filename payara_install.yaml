@@ -4,8 +4,8 @@
   tasks:
     #- name: "Install Java"
      # win_shell: choco install jdk8 -y
-    #- name: "Set Java Path"
-      #win_shell: '[Environment]::SetEnvironmentVariable("Path",[Environment]::GetEnvironmentVariable('Path',[EnvironmentVariableTarget]::Machine) + "$($Env:JAVA_HOME)\bin",[EnvironmentVariableTarget]::Machine)'
+    - name: "Set Java Path"
+      win_shell: "'[Environment]::SetEnvironmentVariable("Path",[Environment]::GetEnvironmentVariable('Path',[EnvironmentVariableTarget]::Machine) + "$($Env:JAVA_HOME)\bin",[EnvironmentVariableTarget]::Machine)'"
   #  - name: "Install Payara-Chocolaty"
     #  win_shell: choco install payara -y
       #- name: "Install Payara-CommandShell"
@@ -14,5 +14,5 @@
    #    win_shell: C:\ProgramData\chocolatey\lib\payara\tools\payara41\glassfish\domains\domain1\bin\Payara_domain1Service.exe start
   #   - name: "open Port 443"
    #    win_shell: netsh advfirewall firewall add rule name="Port 443" dir=in action=allow protocol=TCP localport=443
-     - name: "Disable Payara HTTP listener"
-       win_shell:  C:\ProgramData\chocolatey\lib\payara\tools\payara41\bin\asadmin.bat set configs.config.server-config.network-config.network-listeners.network-listener.http-listener-1.enabled=false
+    # - name: "Disable Payara HTTP listener"
+      # win_shell:  C:\ProgramData\chocolatey\lib\payara\tools\payara41\bin\asadmin.bat set configs.config.server-config.network-config.network-listeners.network-listener.http-listener-1.enabled=false
