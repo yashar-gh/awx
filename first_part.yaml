@@ -2,6 +2,7 @@
 - name: "First Part"
   hosts: all
   tasks:
-    - name: "Stop MSSQL Service"
+    - name: "Get MSSQL dependent services "
       win_shell: Get-Service -DisplayName "SQL Server (MSSQLSERVER)" | Format-List -Property Name, DependentServices
->> Start-Service -Name "SQL Server (MSSQLSERVER)"
+    - name: "Stop MSSQL Service"
+      win_shell: Stop-Service -Name "SQL Server (MSSQLSERVER)" -force
