@@ -10,5 +10,7 @@
 #    win_shell: Remove-Item "C:\B\B-Temp" -Recurse -Force
 #  - name: "Rename Log-File"
 #    win_shell: Rename-Item "C:\B\B-lib\b-text.txt" -NewName "Old-Log.txt" -Force
-  - name: "Copy lib Directory"
-    win_shell: Copy-Item -Path "C:\A\A-lib\*" -Destination "C:\B" -Recurse -Force
+#  - name: "Copy lib Directory"
+#    win_shell: Copy-Item -Path "C:\A\A-lib\*" -Destination "C:\B\B-lib" -Recurse -Force
+#  - name: ""
+#    win_shell: 
