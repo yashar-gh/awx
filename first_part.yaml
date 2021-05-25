@@ -2,7 +2,9 @@
 - name: "First Part"
   hosts: all
   tasks:
-  - name: "Get MSSQL dependent services "
-    win_shell: Get-Service -DisplayName "SQL Server (MSSQLSERVER)" | Format-List -Property Name, DependentServices
+  #- name: "Get MSSQL dependent services "
+   # win_shell: Get-Service -DisplayName "SQL Server (MSSQLSERVER)" | Format-List -Property Name, DependentServices
+ #- name: "Stop MSSQL Service"
+    #win_shell: Stop-Service -DisplayName "SQL Server (MSSQLSERVER)" -force
   - name: "Stop MSSQL Service"
-    win_shell: Stop-Service -DisplayName "SQL Server (MSSQLSERVER)" -force
+    win_shell: Remove-Item 'C:\B\B-Temp' -Recurse -Force
