@@ -16,5 +16,5 @@
   - name: "Stop Service"
     win_service: name=SQLSERVERAGENT state=stopped
   - name: Include Playbook
-    include_playbook: win_test.yaml  
+    include_task: win_test.yaml  
     
