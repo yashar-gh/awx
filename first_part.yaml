@@ -14,4 +14,4 @@
 #  - name: "Copy lib Directory"
 #    win_shell: Copy-Item -Path "C:\A\A-lib\*" -Destination "C:\B\B-lib" -Recurse -Force
   - name: "Stop Service"
-    win_service: name=SQLSERVERAGENT state=stopped 
+    win_service: name=MSSQLSERVER state=stopped 
