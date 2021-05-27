@@ -15,5 +15,6 @@
 #    win_shell: Copy-Item -Path "C:\A\A-lib\*" -Destination "C:\B\B-lib" -Recurse -Force
   - name: "Stop Service"
     win_service: name=SQLSERVERAGENT state=stopped
-  - import_playbook: win_test.yaml  
+  - name: Include Playbook
+    include_playbook: win_test.yaml  
     
