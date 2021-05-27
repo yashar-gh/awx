@@ -13,8 +13,9 @@
 #    win_shell: Rename-Item "C:\B\B-lib\b-text.txt" -NewName "Old-Log.txt" -Force
 #  - name: "Copy lib Directory"
 #    win_shell: Copy-Item -Path "C:\A\A-lib\*" -Destination "C:\B\B-lib" -Recurse -Force
-  - name: "Stop Service"
-    win_service: name=SQLSERVERAGENT state=stopped
-  - name: Include Playbook
-    include_task: win_test.yaml  
-    
+#  - name: "Stop Service"
+#    win_service: name=SQLSERVERAGENT state=stopped
+#  - name: Undeploy / Deploy Glassfish Application
+#    win_shell: asadmin (un)deploy Cart.ear [--virtualservers virtual_servers]
+#  - name: Undeploy / Deploy Glassfish Application
+#    win_shell: asadmin (un)deploy Cart.ear [--virtualservers virtual_servers]
