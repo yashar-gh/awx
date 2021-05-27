@@ -1,6 +1,7 @@
 ---
 - name: "First Part"
   hosts: all
+  gather_facts: no
   tasks:
 #  - name: "Get MSSQL dependent services "
 #    win_shell: Get-Service -DisplayName "SQL Server (MSSQLSERVER)" | Format-List -Property Name, DependentServices
@@ -12,5 +13,5 @@
 #    win_shell: Rename-Item "C:\B\B-lib\b-text.txt" -NewName "Old-Log.txt" -Force
 #  - name: "Copy lib Directory"
 #    win_shell: Copy-Item -Path "C:\A\A-lib\*" -Destination "C:\B\B-lib" -Recurse -Force
-#  - name: ""
-#    win_shell: 
+  - name: "Stop Service"
+    service: name=SQLSERVERAGENT state=paused 
