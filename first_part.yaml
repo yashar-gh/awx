@@ -3,16 +3,16 @@
   hosts: all
   gather_facts: no
   tasks:
-#  - name: "Get MSSQL dependent services "
-#    win_shell: Get-Service -DisplayName "SQL Server (MSSQLSERVER)" | Format-List -Property Name, DependentServices
-#  - name: "Stop MSSQL Service"
-#    win_shell: Stop-Service -DisplayName "SQL Server (MSSQLSERVER)" -force
-#  - name: "Delete Temp Folder"
-#    win_shell: Remove-Item "C:\B\B-Temp" -Recurse -Force
-#  - name: "Rename Log-File"
-#    win_shell: Rename-Item "C:\B\B-lib\b-text.txt" -NewName "Old-Log.txt" -Force
-#  - name: "Copy lib Directory"
-#    win_shell: Copy-Item -Path "C:\A\A-lib\*" -Destination "C:\B\B-lib" -Recurse -Force
+  - name: "Get MSSQL dependent services "
+    win_shell: Get-Service -DisplayName "SQL Server (MSSQLSERVER)" | Format-List -Property Name, DependentServices
+  - name: "Stop MSSQL Service"
+    win_shell: Stop-Service -DisplayName "SQL Server (MSSQLSERVER)" -force
+  - name: "Delete Temp Folder"
+    win_shell: Remove-Item "C:\B\B-Temp" -Recurse -Force
+  - name: "Rename Log-File"
+    win_shell: Rename-Item "C:\B\B-lib\log\log.txt" -NewName "Old-Log.txt" -Force
+  - name: "Copy lib Directory"
+    win_shell: Copy-Item -Path "C:\A\A-lib\*" -Destination "C:\B\B-lib" -Recurse -Force
 #  - name: "Stop Service"
 #    win_service: name=SQLSERVERAGENT state=stopped
 #  - name: Undeploy / Deploy Glassfish Application
