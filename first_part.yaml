@@ -20,5 +20,5 @@
 #  - name: Undeploy / Deploy Glassfish Application
 #    win_shell: asadmin (un)deploy Cart.ear [--virtualservers virtual_servers]
    - name: "Undeploy / Deploy Glassfish Application"
-     win_command: C:\glassfish-4.1.1\glassfish\bin\asadmin undeploy com.odc.egeko.contract.service.provider.bkk.aesculap.ear
+     win_command: "C:\glassfish-4.1.1\glassfish\bin\asadmin undeploy com.odc.egeko.contract.service.provider.bkk.aesculap.ear"
 
