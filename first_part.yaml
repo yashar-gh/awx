@@ -20,4 +20,4 @@
 #  - name: Undeploy / Deploy Glassfish Application
 #    win_shell: asadmin (un)deploy Cart.ear [--virtualservers virtual_servers]
    - name: "Undeploy / Deploy Glassfish Application"
-     win_command: C:\glassfish-4.1.1\glassfish\bin\asadmin start-domain
+     win_command: C:\glassfish-4.1.1\glassfish\bin\asadmin.bat start-domain
