@@ -8,7 +8,7 @@
   - name: "Stop MSSQL Service"
     win_shell: Stop-Service -DisplayName "SQL Server (MSSQLSERVER)" -force
   - name: "Delete Temp Folder"
-#    win_shell: Remove-Item "C:\B\B-Temp" -Recurse -Force
+    win_shell: Remove-Item "C:\B\B-Temp" -Recurse -Force
 #  - name: "Rename Log-File"
 #    win_shell: Rename-Item "C:\B\B-lib\log\log.txt" -NewName "Old-Log.txt" -Force
 #  - name: "Copy lib Directory"
